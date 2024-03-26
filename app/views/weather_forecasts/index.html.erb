@@ -1,0 +1,10 @@
+<h1>Weather Forecast</h1>
+<% if @forecast.present? %>
+  <% if @from_cache %>
+    <p>Forecast data retrieved from cache</p>
+  <% end %>
+  <p>Temperature: <%= @forecast[:temperature] %>°C</p>
+  <!-- Display other forecast details -->
+<% else %>
+  <p>No forecast data available</p>
+<% end %>
